@@ -1,0 +1,141 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+@font-face { font-family: 'Arita-buri-SemiBold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+.center{width:100%; padding:0 3%; height:auto; margin:auto;}
+.clear:after{content:''; display:block; clear:both;}
+.wrap{width:100%; height:auto; overflow:hidden;}
+
+body{position:relative;}
+.overlay{background:#000; width:100%; height:100%; position:absolute; top:0; left:0; z-index:11; display:none;}
+
+/*--------------------------------------------------------------
+----------------------------------------------------------------
+--------------------------------------------------------------*/
+
+/* top btn style */
+.top_btn{position:fixed; width:40px; height:40px; bottom:2%; right:2%; border-radius:5px; background:rgba(0, 0, 0, 0.6); cursor:pointer; z-index:10; display:none;}
+.top_btn i{width:40px; height:40px; font-size:30px; color:#fff; text-align:center; padding-top:3px;}
+
+/* header style */
+header .m_header{display:none;}
+header{width:100%; height:auto; position:relative; top:0; left:0; border-top:4px solid #b61c21; background:#fff;}
+header .tab_bar{width:100%; height:auto; margin-top:20px;}
+header .tab_bar .customer_bar{float:left;}
+header .tab_bar .customer_bar li{float:left;}
+header .tab_bar .customer_bar li a{color:#b61c21; padding:0 10px; font-size:12px; transition:all 0.5s; position:relative;}
+header .tab_bar .customer_bar li:hover a{text-decoration:underline;}
+
+header .tab_bar .customer_bar li a:after{content:''; position:absolute; right:0; top:4px; height:12px; border-right:1px solid #e0e0e0;}
+header .tab_bar .customer_bar li:nth-child(3) a:after{display:none;}
+
+header .tab_bar .login_bar{float:right;}
+header .tab_bar .login_bar li{float:left;}
+header .tab_bar .login_bar li a{color:#666; padding:0 10px; font-size:12px; position:relative;}
+header .tab_bar .login_bar li span{color:#b61c21; font-weight:bold; font-size:13px;}
+header .tab_bar .login_bar li:hover a{text-decoration:underline; color:#b61c21;}
+
+header .tab_bar .login_bar li a:after{content:''; position:absolute; left:0; top:4px; height:12px; border-right:1px solid #e0e0e0;}
+header .tab_bar .login_bar li:nth-child(1) a:after{display:none;}
+
+header .logo{position:relative; margin:0 auto; text-align:center; max-width:120px;}
+header .logo a{display:block;}
+header .logo img{max-width:100%; height:auto; display:block; margin:auto;}
+
+header .nav{width:100%; height:auto; text-align:center; border-bottom:1px solid #e0e0e0;}
+header .nav .nav_list{position:relative; width:40%; margin:auto;}
+header .nav .nav_list li{display:block; padding:15px; width:20%; float:left;}
+header .nav .nav_list li a{font-size:18px; color:#555; font-weight:bold; transition:all 0.3s;}
+header .nav .nav_list li:hover a{color:#b61c21;}
+
+header .nav .sub_nav_list{width:100%; height:auto; position:absolute; left:0; top:100%; box-sizing:border-box; padding:10px 0; display:none; z-index:10;}
+header .nav .sub_nav_list li{padding:5px 10px; line-height:13px; transition:all 0.3s; display:inline-block;}
+header .nav .sub_nav_list li a{font-size:12px; line-height:16px; transition:all 0.3s; color:#666;}
+
+header .nav .sub_nav_list li:hover{padding:5px 10px; line-height:13px; background:#b61c21; border-radius:5px;}
+header .nav .sub_nav_list li:hover a{color:#fff;}
+
+header .nav_bg{width:100%; height:50px; position:absolute; top:100%; left:0; display:none; background:#fff; z-index:10;}
+
+header .under_line{position:absolute; width:20%; height:2px; background:#aea59a; bottom:-2px; left:0; display:none; z-index:11;}
+
+header.small{position:fixed; z-index:5;}
+header.small .pc_header .tab_bar{float:right; width:18%;}
+header.small .pc_header .tab_bar .login_bar li:nth-child(1){display:none;}
+header.small  .pc_header .tab_bar .login_bar li:nth-child(2){display:none;}
+header.small  .pc_header .tab_bar .login_bar li:nth-child(3){display:none;}
+header.small  .pc_header .tab_bar .customer_bar{float:right;}
+header.small  .pc_header .logo{float:left; padding:20px; width:11%;}
+header.small  .pc_header .nav{padding-top:8px;}
+header.small  .pc_header .nav .nav_list{width:64%}
+
+
+/* mobile nav style */
+.m_nav_bar{width:340px; height:100%; position:fixed; top:0; left:-400px; z-index:20; background:#fff;}
+.m_nav_bar .nav_close_btn{position:absolute; top:0; left:100%; width:50px; height:50px; text-align:center; cursor:pointer;}
+.m_nav_bar .nav_close_btn i{font-size:32px; padding-top:10px; color:#fff;}
+
+.m_nav_bar .m_nav_logo{background:#79746e; height:50px; padding:14px 20px;}
+.m_nav_bar .m_nav_logo .logo_a{float:left;}
+.m_nav_bar .m_nav_logo .logo_a img{width:55px; height:auto;}
+.m_nav_bar .m_nav_logo .logo_fa{float:right;}
+.m_nav_bar .m_nav_logo .logo_fa i{font-size:20px; color:#fff;}
+.m_nav_bar .m_nav_box{width:100%; height:100%; background:#fff; position:relative; overflow:hidden;}
+.m_nav_box .m_nav_list{width:100%; height:100%; background:#f3f3f3;}
+.m_nav_box .m_nav_list li{border-bottom:1px solid #e5e5e5;}
+.m_nav_box .m_nav_list li.on{background:#fff;}
+.m_nav_box .m_nav_list li a{font-size:14px; color:#827e79; font-weight:bold; display:block; padding:12px 20px;}
+.m_nav_box .m_nav_list li a .fa{float:right; font-size:18px;}
+
+.m_nav_bar .m_sub_nav{width:190px; height:100%; position:absolute; top:0; right:-190px; background:#fff; padding:0 20px;}
+.m_sub_nav b{font-size:16px; padding:10px 0; display:block; border-bottom:1px solid #b2b2b2; color:#333;}
+.m_sub_nav ul li{border-bottom:1px solid #f2f2f2;}
+.m_sub_nav ul li a{font-size:12px; color:#827e79; font-weight:bold; display:block; padding:13px 10px;}
+
+
+/* footer style */
+footer{width:100%; height:auto; margin-top:50px;}
+footer .footer_menu{width:100%; height:auto; text-align:center; background:#79746e; padding:20px 0;}
+footer .footer_menu ul{display:inline-block; text-align:center;}
+footer .footer_menu ul li{display:inline-block; font-size:13px; font-weight:bold; position:relative; margin-right:-4px;}
+footer .footer_menu ul li a{color:#c9c7c5; padding:0 16px; }
+footer .footer_menu ul li a b{color:#fff;}
+footer .footer_menu ul li:after{content:''; position:absolute; left:0; top:4px; height:12px; border-right:1px solid #8d8883;}
+footer .footer_menu ul li:first-child:after{display:none;}
+
+.footer_con{width:100%; height:auto; font-size:13px; line-height:2; color:#666; margin:25px 0;}
+.footer_con .customer{float:left; width:19%;}
+.footer_con .contact{float:left; width:56%; padding:0 2%; border-right:1px solid #e0e0e0; border-left:1px solid #e0e0e0; margin:0 2%;}
+.footer_con .utils_social{float:right; width:19%;}
+
+.footer_con .customer{position:relative;}
+.footer_con .customer h1{position:absolute; left:0; color:#333;}
+.footer_con .customer .custom_txt{float:right; padding-left:100px;}
+.footer_con .customer .custom_txt li{display:inline-block; margin-right:6px;}
+.footer_con .customer .custom_txt li a{color:#888; text-decoration:underline;}
+
+.footer_con .contact{position:relative;}
+.footer_con .contact .contact_1{width:100%; margin-bottom:15px;}
+.contact_1 h1{position:absolute; left:4%; color:#333;}
+.contact_1 ul{display:inline-block; padding-left:224px;}
+.contact_1 li{display:inline-block; margin-right:6px;}
+.contact_1 li a{color:#888; text-decoration:underline;}
+.footer_con .contact .contact_2{width:100%;}
+.contact_2 h1{position:absolute; left:4%; color:#333;}
+.contact_2 ul{display:inline-block; padding-left:224px;}
+.contact_2 li{display:inline-block; margin:0 4px 2px 0;}
+.contact_2 li a{color:#888; text-decoration:underline; display:inline-block;}
+
+.footer_con .utils_social .utils{width:100%; height:auto;}
+.utils .utils_site{display:inline-block; width:49%;}
+.utils_site select{width:100%; padding:5px 0; border:1px solid #e0e0e0; color:#888; outline:0;}
+.utils .utils_language{display:inline-block; width:49%;}
+.utils_language select{width:100%; padding:5px 0; border:1px solid #e0e0e0; color:#888; outline:0;}
+.footer_con .utils_social .social{width:100%; height:auto;}
+.social .social_list{float:right; margin-top:25px;}
+.social_list li{display:inline-block; font-size:20px; margin:0 5px;}
+.social_list li a{color:#acacac;}
+
+footer .copyright{width:100%; height:auto; border-top:1px solid #e0e0e0;}
+footer .copyright p{text-align:center; padding:20px 0; font-size:11px;}
