@@ -61,10 +61,26 @@
 .introduce_sec .lines h2{font-size:34px; font-family:'Arita-buri-SemiBold'; margin:40px 0; color:#333; text-align:center;}
 
 
+/* counselor section style */
+.counselor{background:url(../img/bg_1.jpg); margin-top:100px; text-align:center;}
+.counselor h2{font-size:38px; border-top:1px solid #b39a78; border-bottom:1px solid #b39a78; color:#b39a78;  font-family:'Arita-buri-SemiBold'; margin:70px 0 30px 0; display:inline-block; line-height:1.5;}
+.counselor_tab{width:60%; margin:0 auto 20px;}
+.counselor_tab>li{float:left; width:25%;}
+.counselor_tab>li>a{border:2px solid #aea59a; border-radius:3px 3px 0 0; display:block; margin-left:3px; position:relative; border-bottom:0; line-height:2.5; font-size:14px; padding:0 10px; background:#aea59a; color:#fff;}
+.counselor_tab>li>a:before{content:''; position:absolute; background-color:#aea59a; left:-5px; bottom:0; display:block; width:3px; height:2px;}
+.counselor_tab>li:first-child>a{margin-left:0;}
+.counselor_tab>li:first-child>a:before{display:none;}
 
+.counselor_tab>li.on>a{color:#3f3e3b; background:transparent;}
 
-
-
+.tab_con{width:75%; margin:auto;}
+.counselor_list{width:32%; margin-right:2%; float:left; position:relative; margin-bottom:2%;}
+.counselor_list:nth-child(3n){margin-right:0;}
+.counselor_list img{width:100%; height:auto;}
+.counselor_list .list_box_txt{position:absolute; bottom:15%; left:10%;}
+.counselor_list .list_box_txt span{display:block; text-align:left;}
+.counselor_list .list_box_txt span.company{color:#cbaf88; margin-bottom:10px; font-size:14px;}
+.counselor_list .list_box_txt span.name{color:#fff;}
 
 
 
