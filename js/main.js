@@ -76,7 +76,7 @@ $(document).ready(function(){
   //navigation hover under_line event
   $(".nav_list>li").on("mouseenter", function(){
     var liIndex=$(this).index();
-
+    
     $(".under_line").css({"display":"block"});
     $(".under_line").animate({"left":liIndex * 20+"%"}, 100);
   });
@@ -87,14 +87,17 @@ $(document).ready(function(){
 
   //slick slide event
   $('#slider').slick({
-    dots: false,
+    dots: true,
     infinite: true,
     speed:300,
     slidesToShow: 1,
     adaptiveHeight: true,
-    arrows : false,
+    arrows : true,
     autoplay : true,
-		autoplaySpeed : 2000
+		autoplaySpeed : 5000,
+    prevArrow : "<i class='fa fa-angle-left'></i>",
+	  nextArrow : "<i class='fa fa-angle-right'></i>",
+    dotsClass : "slick-dots"
   });
 
   //mouse hover div event
@@ -114,5 +117,8 @@ $(document).ready(function(){
     $(this).find(".hover_bottom").stop().delay(200).animate({width:0}, 200);
     $(this).find(".hover_left").stop().animate({height:0}, 200);
   });
+
+  //text slide event
+  $('#text_slide').vTicker();
 
 });
